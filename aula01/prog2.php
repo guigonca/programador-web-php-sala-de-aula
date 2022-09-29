@@ -9,7 +9,12 @@
 <body>
     <?php
 
-    echo "<h1>Olá, meu primeiro programa em PHP" 
+    $liguagem = "HTML, CSS e PHP";
+    echo "<h1>Olá, meu primeiro programa em ". $liguagem." </h1>";
+    $liguagem = "HTML, CSS e PHP";
+    echo "Olá, meu primeiro programa em $liguagem";
+
+    printf("<br>Olá, meu primeiro programa em $liguagem");
 
     ?>
 </body>
