@@ -1,28 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="css/estilo.css"/>
-  <meta charset="UTF-8"/>
-  <title>Senac - Curso de PHP</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilo.css"
 </head>
 <body>
-<div>
-	<br/>
-    <p>
-    Escreva um programa que imprima a soma de dois números.
-    </p><br/>
-	
-    <?php
-		$num1 = $_GET["num1"];
-		$num2 = $_GET["num2"];
-        //Soma realizada com sucesso, mesmo sendo uma das variáveis string
-        $total = ($num1 + $num2);
-		echo "A soma de ".$num1." + ".$num2." = ". ($num1 + $num2);
-		echo "<br>A soma de ".$num1." + ".$num2." = ". $total;
-    ?>
-    <br/>
-    <br/>
-    <a href="index.php"><h3>Voltar</h3></a>
-</div>
+    <div>
+        <?php
+        $nome= $_GET["nome"];
+        $idade= $_GET["idade"];
+        $sexo= $_GET["sexo"];
+
+        echo "O seu nome é: ".$nome. ", a sua idade é: ".$idade. " e do sexo ".$sexo;
+        ?>
+    </div>
 </body>
 </html>

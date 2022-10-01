@@ -13,13 +13,14 @@
 <div>
     <?php
         $num1 = 10;
-        $num2 = 2;
+        $num2 = 8;
     
         echo "<br> A divisão de " .$num1. " por " .$num2. " é = " .($num1 / $num2);
         echo "<br> A subtração de " .$num1. " - " .$num2. " é = " .($num1 - $num2);
         echo "<br> A multiplicação de " .$num1. " x " .$num2. " é = " .($num1 * $num2);
     
         ?>
+        <a href="index.php"><h3>Voltar</h3></a>
 </div>
 </body>
 </html>
