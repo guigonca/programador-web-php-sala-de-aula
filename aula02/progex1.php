@@ -10,21 +10,18 @@
 <body>
 <div>
     <h1>Produto A</h1>
-    <nav>
-    Produto
-    </nav>
-    <form action="progex2.php" method="post">
+    
+    <form action="http://localhost/aula02/progex2.php/" method="post">
+        Valor: <br>
+        <input type="number" name="valor" min="0"><br>
         <br>
-        Valor do produto: <br>
-        <input type="number" name="valor"><br>
+        Quantidade: <br>
+        <input type="number" name="quantidade" min="1"><br>
         <br>
-        Quantidade de produtos <br>
-        <input type="number" name="quantidade">
+        <input type="submit" value="Enviar">
 
-        <input type="submit" value="Salvar">
-        <br>
     </form>
-
+    <a style="float: right;"href="http://localhost/aula02/progex2.php/">pagina 2</a>
  </div>
 </body>
 </html>
