@@ -12,17 +12,14 @@
 <fieldset>
     <h1>Produto A</h1>
     
-    <form action="http://localhost/aula02/progex2.php/" method="post">
+    <form action="http://localhost/aula02/prog8.php/" method="get">
         Valor: <br>
-        <input type="number" name="valor" min="0" required><br>
-        <br>
-        Quantidade: <br>
-        <input type="number" name="quantidade" min="1" required><br>
+        <input type="number" name="n" min="0" required><br>
         <br>
         <input type="submit" value="Enviar" >
 
     </form>
-    <a style="float: right;"href="http://localhost/aula02/progex2.php/">pagina 2</a>
+    <a style="float: right;"href="http://localhost/aula02/prog8.php/">pagina 2</a>
     </fieldset>
  </div>
 </body>
