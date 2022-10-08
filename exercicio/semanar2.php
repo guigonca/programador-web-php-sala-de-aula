@@ -22,31 +22,24 @@
         
         switch($operacao){
             case 1:
-                echo "Dia de Descansar";
+            case 7:
+                $resposta = "dia de descanço...";
                 break;
             case 2:
-                echo "Dia de Estudar!";
-                break;
             case 3:
-                echo "Dia de Trabalhar!";
-                break;
-            case 4:
-                echo "Dia de Estudar!";
-                break;
+            case 4: 
             case 5:
-                echo "Dia de Trabalhar!";
-                break;
             case 6:
-                echo "Estudar!";
+                $resposta = "dia de trabalhar e (ou) estudar. ";
                 break;
             default:
-                echo "Dia de Descansar";
-                break;
-                
+                $resposta = "Numero de dia da semana invalido" ;
+                            
             }
+            echo $resposta;
             
             ?>
-            <a style="position: relative; right: -305px; top: 150px;" href="http://localhost/exercicio/semana.html"><i class="bi bi-reply" style="font-size: 2rem; color: cornflowerblue;"></i></a>
+            <a style="position: relative; right: -205px; top: 150px;" href="http://localhost/exercicio/semana2.html"><i class="bi bi-reply" style="font-size: 2rem; color: cornflowerblue;"></i></a>
         
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
