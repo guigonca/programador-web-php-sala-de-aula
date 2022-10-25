@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/estilo.css"/>
+  <meta charset="UTF-8"/>
+  <title>Senac - Curso de PHP</title>
 </head>
 <body>
-    
-     
 <div>
-    <?php
-        $num1 = 10;
-        $num2 = 8;
-    
-        echo "<br> A divisão de " .$num1. " por " .$num2. " é = " .($num1 / $num2);
-        echo "<br> A subtração de " .$num1. " - " .$num2. " é = " .($num1 - $num2);
-        echo "<br> A multiplicação de " .$num1. " x " .$num2. " é = " .($num1 * $num2);
-    
+	<p>
+	Escreva um programa que leia o nome, a idade e o sexo de uma pessoa.
+	O programa deverá imprimir as informações lidas.
+	</p>
+
+        <?php 
+        $nome = $_GET["nome"];
+        $idade = $_GET["idade"];
+        $sexo = $_GET["sexo"];
+
+        echo "O seu Nome: ". $nome .", a sua idade é: ". $idade . ", do sexo: ". $sexo;
         ?>
-        <a href="index.php"><h3>Voltar</h3></a>
+
+    <br/>
+    <br/>
+    <a href="index.php"><h3>Voltar</h3></a>
 </div>
 </body>
 </html>

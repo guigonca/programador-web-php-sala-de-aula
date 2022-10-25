@@ -13,24 +13,64 @@
 
 <body>
     <div>
-        <h1 style="text-align: center;">Procedimentos, funções e métodos.</h1>
-        <h4 style="text-align: center;">restando funções</h4>
+
+
+
+        <h1 style="text-align: center;">
+            Procedimentos, Funções e Métodos.
+        </h1>
+        <h4 style="text-align: center;">Testando Funções</h4>
         <hr>
         <br>
         <pre>
             <?php
-
-                include "funcoes2.php";
-                // include "funcoes.php";
-
-                
-                // $texto = escreva_texto4("Texto 4");
-                // echo $texto;
-                
-                $num = subtracao(10,7);
-                echo "A subtração é: ".$num;
-                
-            ?>
+        
+        require_once "funcoes.php";
+        require_once "funcoes3.php";
+        
+        escreva_texto2("Meu texto executado por uma Procedimento.");
+        echo "<hr>";
+        pulaLinha(0);
+        echo "Texto exemplo..."; 
+        escreva_texto2("Meu texto executado por uma Procedimento.");
+        
+        // $texto = escreva_texto3("Meu texto executado por uma função com retorno.");
+        // echo "Texto recebido => $texto"; 
+        // pulaLinha(0);
+        echo "Texto recebido => " . escreva_texto3("TESTE!!!!"); 
+        echo escreva_texto4("TESTE!!!!"); 
+        pulaLinha(0);
+        echo "".escreva_texto3("--------------------------------------");
+        pulaLinha(0);
+        echo "Resultado da multiplicação: ". multiplicacaoR(5, 7);
+        pulaLinha(0);
+        echo "Resultado da Divisão: ". divisaoR(5, 5);
+        pulaLinha(0);
+        echo escreva_texto3("--------------------------------------");
+        pulaLinha(0);
+        echo escreva_texto3("------ Passagem por Valor -----------");
+        pulaLinha(0);
+        echo "Valor direto: " . somaR(5, 7); 
+        pulaLinha(0);
+        $num1 = 5;
+        $num2 = 7;
+        echo "Valor por variável: ". somaR($num1, $num2); 
+        pulaLinha(0);
+        echo "Qual é o valor: ". $num2; 
+        pulaLinha(0);
+        echo escreva_texto3("------ Passagem por Referência -----------");
+        pulaLinha(0);
+        echo "Valor direto: " . somaR(5, 7); 
+        pulaLinha(0);
+        $num1 = 5;
+        $num2 = 7;
+        echo "Valor por variável: ". somaR2($num1, $num2); 
+        pulaLinha(0);
+        echo "Qual é o valor: ". $num2; 
+        pulaLinha(0);
+        include_once "funcoes.php";
+        require_once "funcoes2.php";
+        ?>
         </pre>
 
     </div>

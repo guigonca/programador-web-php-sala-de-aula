@@ -1,0 +1,168 @@
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:06:52
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:08:49
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:08:49
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:08:50
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:08:50
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:08:59
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:08:59
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:08:59
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:08:59
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:09:01
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:09:01
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:09:01
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:09:02
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:09:02
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:09:02
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:09:15
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:09:15
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:09:15
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:09:15
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:09:25
+Nome: 
+CPF: 
+E-mail: 
+Telefone 
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:10:51
+Nome: gui
+CPF: 111.111.111-11
+E-mail: guilherme@gmail.com
+Telefone 21555555555
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:12:06
+Nome: gui
+CPF: 111.111.111-11
+E-mail: guilherme@gmail.com
+Telefone 21555555555
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:12:31
+Nome: gui
+CPF: 111.111.111-11
+E-mail: guilherme@gmail.com
+Telefone 21555555555
+------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022 as 21:13:07
+Nome: Guilherme
+CPF: 13059143765-
+E-mail: guilherme@gmail.com
+Telefone 9860045671
+------------------------
+

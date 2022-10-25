@@ -22,6 +22,7 @@
         echo "Esse produto é acima de R$ 300,00 por isso você ganhou um desconto de 10%, ficando em: R$ " .$valor - ($valor*10/100);
     }if($quantidade > 5){
             echo "Com mais de 5 produtos você ganhou um desconto de 7%! Ficando no total = R$ ".$total - ($total*7/100);
+            
     }
     ?>
     

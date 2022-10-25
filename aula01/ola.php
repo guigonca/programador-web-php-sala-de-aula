@@ -8,21 +8,11 @@
 </head>
 <body>
     <?php
-    $primeiro= 5;
-    $segundo= 6;
 
-    echo "$primeiro , $segundo <br>";
-    printf ($primeiro + $segundo);
-
-
-
-
-
-
-    // echo "<h1>Olá, meu primeiro programa em" .$linguagem."</h1>";
-    // printf("<h1>Olá, meu primeiro programa em" .$linguagem."</h1>");
-    // printf("Olá, meu primeiro programa em .$linguagem.");
+    echo "<h1>Olá, meu primeiro programa em PHP</h1>"; 
 
     ?>
+     <br/>
+    <a href="index.php"><h3>Voltar</h3></a>
 </body>
 </html>
