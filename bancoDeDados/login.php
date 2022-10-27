@@ -1,3 +1,9 @@
+<?php
+if(!isset($_SESSION)){
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -9,60 +15,24 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilo.css" />
     <title>Senac - Curso de PHP</title>
-    <script>
-        function validar(){
-            var msg = "";
-            var flag = 0;
-
-        
-            if(f.cpf.value == ""){
-                flag = 1;
-                msg = msg + "<br>Preencha o campo E-mail!";
-            }
-            if(f.email.value == ""){
-                flag = 1;
-                msg = msg + "<br>Preencha o campo Senha!";
-            }
-
-            if(flag == 0){
-                document.getElementById("resposta").style.display= 'none';
-                return true;
-            } else{
-                document.getElementById("resposta").style.display= 'block';
-                document.getElementById("resposta").innerHTML = msg;
-                return false;
-
-            }
-
-        }
-
-    </script>
 </head>
 
 <body>
     <div>
+    <?php 
+    $idUsuario = $_SESSION["id"];
+    $nomeUsuario = $_SESSION["nome"];
 
-        <h3 style="text-align: center;">
-            Login
-        </h3>
-        <hr>
-        <section id="resposta" class="alert alert-danger" role="alert" style ="display: none;">
+    echo "<br><h2 style ='text-align: center;'> Bem vindo ao sistema!<br> $nomeUsuario</h2>";
 
-        </section>
+    
+    ?>
+    <a href="index.php" class="btn btn-link">
+            <i class="bi bi-reply" style="font-size: 2rem;"></i>
 
-        <form action="desafio_cpf_recebido.php" method="post" name="f" onsubmit="return validar()">
-            <br>
-            <label  class="form-label">E-mail:</label>
-            <input type="email" name="email" class="form-control">
-
-            <label  class="form-label">Senha:</label>
-            <input type="password" name="senha" class="form-control">
-            <br>
-            <input type="Submit" value="Login" class="btn btn-primary">
-
-        </form>
-        
+        </a>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
