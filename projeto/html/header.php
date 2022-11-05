@@ -7,7 +7,7 @@
 				<h1 id="textoEnviamos">Enviamos produtos para todo o território nacional.</h1>
 				<figure style="border: none">
 					<img id="carrinho" src="img/carrinhoCompra.png" alt="">
-					<img id="cliente" src="img/clientes.png" alt="">
+					<img id="cliente" src="img/clientes.png" alt="" data-bs-toggle="modal" data-bs-target="#login_modal">
 				</figure>
 			</section>
 	<?php 
