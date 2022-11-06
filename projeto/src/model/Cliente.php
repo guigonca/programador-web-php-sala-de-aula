@@ -1,7 +1,8 @@
-<?php 
+<?php
 
 class Cliente {
-    //O que eu tenho 
+
+    //O que eu tenho
     private int $idCliente;
     private string $nome;
     private string $dataNascimento;
@@ -14,42 +15,41 @@ class Cliente {
     private string $senha;
     private bool $ativo;
 
-//Método construtor
-public function __construckt(int $idCliente, string $nome, string $dataNascimento, string $orgao, string $rg, string $cpf, string $estadoCivil, string $sexo, string $email, string $senha, bool $ativo)
-{
-    $this-> $idCliente = $idCliente;
-    $this-> $nome = $nome;
-    $this-> $dataNascimento = $dataNascimento;
-    $this-> $orgao = $orgao;
-    $this-> $rg = $rg; 
-    $this-> $cpf = $cpf;
-    $this-> $estadoCivil = $estadoCivil;
-    $this-> $sexo = $sexo;
-    $this-> $email = $email;
-    $this-> $senha = $senha;
-    $this-> $ativo = $ativo;
-}
-//O que eu faço: Métodos
-private function validaNome(string $nome){
-    if(strlen($nome)<5){
-        echo "Nome precisa ter pelo menos 5 caracteres.";
-    }else{
+    //Método construtor
+    public function __construct(int $idCliente, string $nome, string $dataNascimento, string $orgao, string $rg, string $cpf, string $estadoCivil, string $sexo, string $email, string $senha, bool $ativo)
+    {
+        $this->idCliente = $idCliente;
         $this->nome = $nome;
+        $this->dataNascimento = $dataNascimento;
+        $this->orgao = $orgao;
+        $this->rg = $rg;
+        $this->cpf = $cpf;
+        $this->estadoCivil =  $estadoCivil;
+        $this->sexo = $sexo;
+        $this->email = $email;
+        $this->senha = $senha;
+        $this->ativo = $ativo;
     }
-}
 
+    //Oque eu faço: Métodos
+    private function validaNome(string $nome){
+        if(strlen($nome) < 5){
+            echo "Nome precisa ter pelo menos 5 caracteres.";
+        } else {
+            $this->nome = $nome;
+        }
+    }
 
+    //Métodos acessores Getters e Setters
+       public function getIdCliente(): int{
+        return $this->idCliente;
+       }
 
-//Métodos acessoresGetters e Setters
-public function getIdCliente(): int{
-    return $this->idCliente;
-}
+       public function setIdCliente(int $idCliente): void{
+            $this->idCliente = $idCliente;
+       }
 
-public function setIdCliente(int $idCliente) : void{
-    $this->idCliente = $idCliente; 
-}
-
-public function getNome(): string
+       public function getNome(): string
     {
         return $this->nome;
     }
@@ -149,3 +149,4 @@ public function getNome(): string
     {
         $this->ativo = $ativo;
     }
+}

@@ -2,16 +2,13 @@
 <html lang="pt-br">
 
 <head>
-<?php require "html/head.php";?>
-
+	<?php require "html/head.php" ?>
 </head>
 
-<?php 
-require "html/head.php";
-?>
 	<!--  -->
 	<body>
-		<?php include "html/header.php"?>
+
+	<?php include "html/header.php" ?>
 
 		<main>
 			<!-- <h1>SOBRE MIM</h1> -->
@@ -63,9 +60,9 @@ require "html/head.php";
 			<h1 id="nomeCliente">João de Santo Cristo</h1>
 		</figure>
 		<aside>
-			<?php 
-			include "html/menu.php";
-			?>
+			
+		<?php include "html/menu.php" ?> 
+
 			<ul class="icones-sociais">
 				<!-- <li>
 					<a href="#">
@@ -124,12 +121,12 @@ require "html/head.php";
 		</main>
 		
 		<?php
-		include "html/rodaPe.php";
+			include "html/rodaPe.php";
 		?>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-		crossorigin="anonymous"></script>
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
 
 </body>
 

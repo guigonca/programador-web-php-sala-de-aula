@@ -10,8 +10,7 @@
 					<img id="cliente" src="img/clientes.png" alt="" data-bs-toggle="modal" data-bs-target="#login_modal">
 				</figure>
 			</section>
-	<?php 
-		include "html/menu.php";
-	?>
+			
+			<?php include "menu.php" ?> 
 
-</header>
+		</header>

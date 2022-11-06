@@ -1,3 +1,3 @@
 <footer>
-	&copy; Site Estudo
+    &copy; Site Estudo
 </footer>
