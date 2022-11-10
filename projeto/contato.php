@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-	<?php require "html/head.php"?>
+	<?php require "html/head.php" ?>
 
 </head>
 
@@ -16,7 +16,7 @@
         
         if($sql_query->num_rows > 0){
             $lista = $sql_query->fetch_all(MYSQLI_ASSOC);
-
+            // var_dump($lista);
         }
 		?>
 		<main>
@@ -29,7 +29,7 @@
                     <th>DESCRIÇÃO</th>
                     <th>OBS</th>
                 </tr>
-                <?php foreach($lista as $contato) : ?>
+                <?php foreach($lista as $cliente) : ?>
                 <tr>
                     <td><?=$contato["idcliente"]; ?></td>
                     <td><?=$contato["tipo"]; ?></td>
@@ -37,8 +37,8 @@
                     <td><?=$contato["obs"]; ?></td>
                    
                     <td>
-                        <a href="edicaoCcontato.php?id=<?=$contato['idcliente']; ?>">[EDITAR]</a>
-                        <a href="excluirContato.php?id=<?=$contato['idcliente']; ?>">[EXCLUIR]</a>
+                        <a href="edicaoCliente.php?id=<?=$cliente['idcliente']; ?>">[EDITAR]</a>
+                        <a href="excluirCliente.php?id=<?=$cliente['idcliente']; ?>">[EXCLUIR]</a>
                     </td>
                    <?php endforeach ?> 
                 </tr>

@@ -27,7 +27,6 @@
 		</div>
 
 		<main>
-<!-- Modal -->
 
 		</main>
 <?php

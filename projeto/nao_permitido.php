@@ -10,30 +10,30 @@
 	<body>
 		<?php include "html/header.php" ?>
 		<main>
-        <?php
+		<?php
 
-echo '<!DOCTYPE html>';
-echo '<html lang="pt-br">';
-echo '<head>';
-echo '   <meta http-equiv="refresh" content="5; url=index.php">';
-echo '</head>';
-echo '<body>';
-echo '<div class="alert alert-danger" role="alert">
-    <a style="text-decoration: none; float: right;" href="index.php" class="alert-link">x</a>
-    <h3 style="text-align: center;">Você não pode acessar essa página sem esta logado!</h3>
-</div>';
-echo '</body>';
-echo '</html>';
-// echo "<br><h2 style='text-align: center;'>Você não pode acessar essa página sem esta logado!</h2>";
-
-?>
-       
-<br />
-<br />
-<a href="index.php" class="btn btn-link" style="text-align: center;">
-    <i class="bi bi-reply" style="font-size: 2rem;"></i>
-</a>
-<?php die(); ?>
+		echo '<!DOCTYPE html>';
+		echo '<html lang="pt-br">';
+		echo '<head>';
+		echo '   <meta http-equiv="refresh" content="5; url=index.php">';
+		echo '</head>';
+		echo '<body>';
+		echo '<div class="alert alert-danger" role="alert">
+			<a style="text-decoration: none; float: right;" href="index.php" class="alert-link">x</a>
+			<h3 style="text-align: center;">Você não pode acessar essa página sem esta logado!</h3>
+		</div>';
+		echo '</body>';
+		echo '</html>';
+        // echo "<br><h2 style='text-align: center;'>Você não pode acessar essa página sem esta logado!</h2>";
+        
+        ?>
+               
+        <br />
+        <br />
+        <a href="index.php" class="btn btn-link" style="text-align: center;">
+            <i class="bi bi-reply" style="font-size: 2rem;"></i>
+        </a>
+        <?php die(); ?>
 		</main>
 <?php
 	include "html/rodaPe.php";
