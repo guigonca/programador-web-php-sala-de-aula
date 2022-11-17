@@ -8,41 +8,10 @@
 
 	<!--  -->
 	<body>
-		<?php include "html/header.php"; 
-		require_once "src/conexao.php";
-		$lista = [];
-        $sql_code = "SELECT * FROM contato";
-        $sql_query = $conexao->query($sql_code);
-        
-        if($sql_query->num_rows > 0){
-            $lista = $sql_query->fetch_all(MYSQLI_ASSOC);
-            // var_dump($lista);
-        }
-		?>
+		<?php include "html/header.php" ?>
 		<main>
-            <h1>Contatos</h1>			
-            <h3>Lista de contatos</h3>
-            <table class="table table-bordered">
-                <tr>
-                    <th>ID</th>                    
-                    <th>TIPO</th>
-                    <th>DESCRIÇÃO</th>
-                    <th>OBS</th>
-                </tr>
-                <?php foreach($lista as $cliente) : ?>
-                <tr>
-                    <td><?=$contato["idcliente"]; ?></td>
-                    <td><?=$contato["tipo"]; ?></td>
-                    <td><?=$contato["descricao"]; ?></td>
-                    <td><?=$contato["obs"]; ?></td>
-                   
-                    <td>
-                        <a href="edicaoCliente.php?id=<?=$cliente['idcliente']; ?>">[EDITAR]</a>
-                        <a href="excluirCliente.php?id=<?=$cliente['idcliente']; ?>">[EXCLUIR]</a>
-                    </td>
-                   <?php endforeach ?> 
-                </tr>
-            </table>
+            <h1>Contatos</h1>
+			
 		</main>
 <?php
 	include "html/rodaPe.php";

@@ -19,6 +19,15 @@
             $lista = $sql_query->fetch_all(MYSQLI_ASSOC);
             // var_dump($lista);
         }
+
+        if(!isset($_SESSION)){
+            session_start();
+        }
+    
+        $id = isset($_SESSION["id"]) ? $_SESSION["id"] : 0;
+        $nome = isset($_SESSION["nome"]) ? $_SESSION["nome"] : "";
+
+        // echo "ID: $id - Cliente: $nome";
         ?>
 
         <main>
@@ -58,7 +67,7 @@
                    <?php endforeach ?> 
                 </tr>
             </table>
-        </div>
+            </div>
 		</main>
 
 

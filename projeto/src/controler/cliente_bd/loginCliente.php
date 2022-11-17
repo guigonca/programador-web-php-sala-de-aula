@@ -6,35 +6,35 @@
             $senha = $conexao->real_escape_string($_POST["senha"]);
 
             $sql_code = "select * from cliente where email = '$email'";
-            $sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: ". $conexao->error);
-
+            $sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: " . $conexao->error);
+            
             //Quantidade de linhas retornado;
-            $qtd = $sql_query->num_rows;  //Atritubo num rows = numero de linhas
+            $qtd = $sql_query->num_rows; //Atributo num_rows = número de linhas
 
-            if($qtd ==1){
+            if($qtd == 1){
+                
                 $cliente = $sql_query->fetch_assoc();
 
-                if(passaword_verify($senha, $cliente['senha'])){
-
+                if(password_verify($senha, $cliente['senha'])){
                     if(!isset($_SESSION)){
                         session_start();
                     }
 
-                    $_SESSION['id']= $cliente['idcliente'];
-                    $_SESSION['nome']= $cliente['nome'];
-
-                    header ("Location: ../../../index.php");
+                    $_SESSION['id'] = $cliente['idcliente'];
+                    $_SESSION['nome'] = $cliente['nome'];
                     
-                }else {
-                    // header ("Location: ../../../nao_permitido.php");
+                    header("Location: ../../../index.php");
+                } else {
+
+                    // header("Location: ../../../nao_permitido.php");
                     echo "Falha ao logar! E-mail ou senha incorretos";
-
                 }
-
-            }else {
+                
+            } else {
                 echo "Falha ao logar! E-mail ou senha incorretos";
-            }   
-            
+            }
+
         }
+
     
 ?>
