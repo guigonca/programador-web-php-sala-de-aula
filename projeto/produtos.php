@@ -14,6 +14,12 @@
 
 		$sql_code = "SELECT * FROM produtos";
 		$sql_query = $conexao->query($sql_code);
+
+		if(!isset($_SESSION)){
+			session_start();
+		}
+
+		
 		?>
 		<main>
 			<h1>Produtos</h1>
@@ -28,21 +34,27 @@
 					<th>FABRICANTE</th>
 					<th>ATIVO</th>
 					<th>AÇÃO</th>
+					
 				</tr>
 				<?php 
 				while($produto = $sql_query->fetch_assoc()){
 				?>
 				<tr>
 					<td><?= $produto['idproduto']?></td>
-					<td><img height="50" src="<?= $produto['foto']?>"></td>
+					<td><img height="50" src="<?= $produto['foto']?>"</td>
 					<td><?= $produto['nome']?></td>
 					<td><?= $produto['tipo']?></td>
 					<td><?= $produto['categoria']?></td>
 					<td><?= $produto['fabricante']?></td>
 					<td><?= $produto['ativo']?></td>
+					<td><?= $produto['ativo']?></td>
 					<td>
-					<a href="estoque.php?id=<?=$produto['idproduto']; ?>">[ESTOQUE]</a>
-                        <a href="mais_detalhes?id=<?=$produto['idproduto']; ?>">[DETALHES]</a>
+					<?php
+					if(isset($_SESSION['tipo'])){	
+						$idproduto = $produto['idproduto'];				
+						echo "<a href='estoque.php?id=>$idproduto;'>[ESTOQUE]</a>"
+					}?>	
+						<a href="#?id=<?=$produto['idproduto']; ?>">[DETALHES]</a>
 					</td>
 				</tr>
 				<?php

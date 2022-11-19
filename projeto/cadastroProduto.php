@@ -4,9 +4,11 @@
 <head>
 	<?php 
 	require "html/head.php";
+	
+	
+	
 	?>
 	<script>
-		
 	function selecao() {
 
 		if (f.tipo.value == "HARDWARE") {
@@ -23,30 +25,33 @@
 			document.getElementById("divPer").style.display = 'block';
 		}
 	}
+
+	
 	</script>
 	
 </head>
 
 	<!--  -->
 	<body>
-		<?php 
-		include "html/header.php";
+		<?php include "html/header.php";
+
 		require_once "src/conexao.php";
 
-		$nome = isset($_POST["nome"]) ? $_POST["nome"] : "";
-		$tipo = isset($_POST["tipo"]) ? $_POST["tipo"] : "";
-		$categoria = isset($_POST["categoria"]) ? $_POST["categoria"] : "";
-		$fabricante = isset($_POST["fabricante"]) ? $_POST["fabricante"] : "";
-		$descricao = isset($_POST["descricao"]) ? $_POST["descricao"] : "";
-		$ativo = isset($_POST["ativo"]) ? $_POST["ativo"] : true;
-		
+		$nome = isset($_POST['nome']) ? $_POST['nome'] : "";
+		$tipo = isset($_POST['tipo']) ? $_POST['tipo'] : "";
+		$categoria = isset($_POST['categoria'])? $_POST['categoria'] : "";
+		$fabricante = isset($_POST['fabricante'])? $_POST['fabricante'] : "";
+		$descricao = isset($_POST['descricao'])? $_POST['descricao'] : "";
+		$ativo = isset($_POST['ativo'])? $_POST['ativo'] : true;
+
+
 		if(isset($_FILES['foto'])){
 			$foto = $_FILES['foto'];
 			
 			if($foto['size'] > 2097152){
 				die("Arquivo muito grande! Max: 2MB");
 			}
-	
+			
 			$pasta = "img/produtos/";
 			$nomeOriginal = $foto['name'];
 			$nomeDaFoto = uniqid();
@@ -58,16 +63,11 @@
 			// img/produtos/sdfksajfksa.png
 			$caminho = $pasta . $nomeDaFoto . "." .$extensao;
 			$deu_certo = move_uploaded_file($foto["tmp_name"], $caminho);
-			//img/produtos/1654vbfdsvb6fds4.png
+	
 			if($deu_certo){
 				$sql_code = "INSERT INTO produtos VALUES (NULL, '$nome', '$tipo', '$categoria', '$fabricante', '$descricao', '$caminho', true)";
+				$sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: ". $conexao->error . "<br>" . var_dump($conexao->error));
 
-				$sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: " . $conexao->error . "<br>" . var_dump($conexao->error));
-				if($sql_query){
-					echo "Gravou!";
-				} else {
-					echo "Não gravou!";
-				}
 
 				echo "<p>Arquivo enviado com sucesso! Para acessá-lo clique aqui:
 				<a target='_blank' href='$pasta$nomeDaFoto.$extensao'>Foto</a> 
@@ -79,7 +79,6 @@
 	
 		}
 		
-
 		?>
 		<main>
 		<div class="container-fluid">
