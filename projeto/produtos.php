@@ -22,6 +22,13 @@
 		
 		?>
 		<main>
+
+		<!-- <a href="cadastroProduto.php" class="col-6 btn btn-link" style="float:right;" >
+			<i class="bi bi-plus-circle" style="font-size: 2rem;"></i>
+			<h6>Cadastrar</h6>
+		</a> -->
+
+
 			<h1>Produtos</h1>
 			<h3>Lista cadastrados</h3>
 			<table class="table table-bordered">
@@ -50,11 +57,16 @@
 					<td><?= $produto['ativo']?></td>
 					<td>
 					<?php
-					if(isset($_SESSION['tipo'])){	
+					if(isset($_SESSION['tipo']) && $_SESSION['tipo']== "Administrador"){	
 						$idproduto = $produto['idproduto'];				
-						echo "<a href='estoque.php?id=>$idproduto;'>[ESTOQUE]</a>"
+						echo "<a href='estoque.php?id=>$idproduto;'>[ESTOQUE]</a>";
+						echo "<a href='cadastroProduto.php' class='col-6 btn btn-link' style='float:right;' >
+						<i class='bi bi-plus-circle' style='font-size: 2rem;'></i>
+						<h6>Cadastrar</h6>
+					</a>";
 					}?>	
-						<a href="#?id=<?=$produto['idproduto']; ?>">[DETALHES]</a>
+					
+						<a href="mais_detalhes.php?id=<?=$produto['idproduto']; ?>">[DETALHES]</a>
 					</td>
 				</tr>
 				<?php

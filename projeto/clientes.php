@@ -61,8 +61,13 @@
                     <td><?=$cliente["email"]; ?></td>
                     <td><?=$cliente["ativo"]; ?></td>
                     <td>
-                        <a href="edicaoCliente.php?id=<?=$cliente['idcliente']; ?>">[EDITAR]</a>
-                        <a href="excluirCliente.php?id=<?=$cliente['idcliente']; ?>">[EXCLUIR]</a>
+                        <?php if(isset($_SESSION['tipo']) && $_SESSION['tipo']== "Administrador"){?>
+                        
+                         <a href='excluirCliente.php?id=<?=$cliente['idcliente']; ?>'>[EXCLUIR]</a>;
+                            
+                        <?php } ?>  
+                            
+                        <a href='edicaoCliente.php?id=<?=$cliente['idcliente']; ?>'>[EDITAR]</a>;
                     </td>
                    <?php endforeach ?> 
                 </tr>
