@@ -22,6 +22,7 @@
 
                     $_SESSION['id'] = $cliente['idcliente'];
                     $_SESSION['nome'] = $cliente['nome'];
+                    $_SESSION['tpcliente'] = $cliente['tpcliente'];
                     
                     header("Location: ../../../index.php");
                 } else {

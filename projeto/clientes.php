@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-	<?php require "html/head.php" ?>
-</head>
-
+    
+    <head>
+        <?php require "html/head.php" ?>
+    </head>
+    
 	<!--  -->
 	<body>
-		<?php 
-        include "html/header.php"; 
+        <?php 
         require_once "src/conexao.php";
+        require_once "src/protect.php";
+        if(!isset($_SESSION['tipo'])){
+            header("Location: nao_permitido.php");
+        }
+        include "html/header.php"; 
 
+        
+                    
+
+        $id = isset($_SESSION["id"]) ? $_SESSION["id"] : 0;
+        $nome = isset($_SESSION["nome"]) ? $_SESSION["nome"] : "";
+        $tipo = isset($_SESSION['tipo']) ? $_SESSION['tipo'] : "";
+       
         $lista = [];
         $sql_code = "SELECT * FROM cliente";
         $sql_query = $conexao->query($sql_code);
@@ -20,12 +31,10 @@
             // var_dump($lista);
         }
 
-        if(!isset($_SESSION)){
-            session_start();
-        }
+        // if(!isset($_SESSION)){
+        //     session_start();
+        // }
     
-        $id = isset($_SESSION["id"]) ? $_SESSION["id"] : 0;
-        $nome = isset($_SESSION["nome"]) ? $_SESSION["nome"] : "";
 
         // echo "ID: $id - Cliente: $nome";
         ?>
@@ -61,13 +70,21 @@
                     <td><?=$cliente["email"]; ?></td>
                     <td><?=$cliente["ativo"]; ?></td>
                     <td>
-                        <?php if(isset($_SESSION['tipo']) && $_SESSION['tipo']== "Administrador"){?>
+                        <a href="edicaoCliente.php?id=<?=$cliente['idcliente']; ?>">
+                        <!-- [EDITAR] -->
+                        <i class="bi bi-pencil-square" style="font-size: 2rem;"></i>
+                        </a>
+
+                       <?php if(isset($_SESSION['tipo']) && $_SESSION['tipo'] == "Administrador"){?>
+
+                        <a href="#" onclick="confirmarApagar(<?=$cliente['idcliente']; ?>)">
+
+                        <!-- src/controler/cliente_bd/excluirCliente.php?id=<?=$cliente['idcliente']; ?> -->
+                        <!-- [EXCLUIR] -->
+                         <i class="bi bi-trash" style="font-size: 2rem; color: red;"></i>
+                        </a>
+                       <?php } ?>
                         
-                         <a href='excluirCliente.php?id=<?=$cliente['idcliente']; ?>'>[EXCLUIR]</a>;
-                            
-                        <?php } ?>  
-                            
-                        <a href='edicaoCliente.php?id=<?=$cliente['idcliente']; ?>'>[EDITAR]</a>;
                     </td>
                    <?php endforeach ?> 
                 </tr>
@@ -84,6 +101,8 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
+
+        <script src="src/js/confirmacao.js"></script>
 
 </body>
 

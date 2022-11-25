@@ -1,8 +1,8 @@
 <footer>
     <section id="rodaPe">
         &copy; Site Estudo
-        <a href="#" style="float: right;">
-            <img data-bs-toggle="modal" data-bs-target="#funcionario_modal" src="../images/restrito.png" alt="Area restrita" title="área restrita">
+        <a href="#" style="float: right; line-height: 50px;" >
+            <img data-bs-toggle="modal" data-bs-target="#funcionario_modal" src="img/restrito.png" alt="Área restrita" title="Área restrita">
         </a>
-    </section>    
+    </section>
 </footer>

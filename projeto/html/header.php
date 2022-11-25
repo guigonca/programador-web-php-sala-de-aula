@@ -84,12 +84,12 @@
 				</div>
 			</div>
 </div>
-
+<!-- Modal -->
 <div class="modal fade" id="funcionario_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h1 class="modal-title fs-5" id="staticBackdropLabel">Fazer login funcionário</h1>
+						<h1 class="modal-title fs-5" id="staticBackdropLabel">Fazer Login Funcionário</h1>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<form action="src/controler/funcionario_bd/loginFuncionario.php" method="post" >
@@ -109,10 +109,9 @@
 							<!-- <input type="submit" value="Entrar" class="btn btn-primary"> -->
 
 							<?php
-							if(isset($_SESSION['tipo']) && $_SESSION['tipo'] == "Administrador"){	
-												
-								echo "<a href='cadastroFuncionario.php'>Cadastro funcionário </a>";
-							}?>	
+						if(isset($_SESSION['tipo']) && $_SESSION['tipo'] == "Administrador"){
+							echo "<a href='cadastroFuncionario.php'>Cadastro de Funcionário</a>";
+						}?>
 
 							
 						</div>

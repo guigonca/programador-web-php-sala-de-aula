@@ -82,7 +82,7 @@
 
 		<main>
         <div class="container-fluid">
-			<h3>Cadastro de Funcionárioos</h3>
+			<h3>Cadastro de Funcionários</h3>
 			<form class="row g-3 container-fluid" name="f" action="src/controler/funcionario_bd/registroFuncionario.php" method="post">
 
 				<div class="col-md-6 col-sm-12">

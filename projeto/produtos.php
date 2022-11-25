@@ -19,16 +19,17 @@
 			session_start();
 		}
 
-		
 		?>
 		<main>
-
-		<!-- <a href="cadastroProduto.php" class="col-6 btn btn-link" style="float:right;" >
+		<?php
+		if(isset($_SESSION['tipo'])){
+		echo '<a href="cadastroProduto.php" class="col-6 btn btn-link" style="float: right;" >
 			<i class="bi bi-plus-circle" style="font-size: 2rem;"></i>
 			<h6>Cadastrar</h6>
-		</a> -->
+		</a>';
 
-
+		}
+		?>
 			<h1>Produtos</h1>
 			<h3>Lista cadastrados</h3>
 			<table class="table table-bordered">
@@ -41,32 +42,25 @@
 					<th>FABRICANTE</th>
 					<th>ATIVO</th>
 					<th>AÇÃO</th>
-					
 				</tr>
 				<?php 
 				while($produto = $sql_query->fetch_assoc()){
 				?>
 				<tr>
 					<td><?= $produto['idproduto']?></td>
-					<td><img height="50" src="<?= $produto['foto']?>"</td>
+					<td><img height="50" src="<?= $produto['foto']?>"></td>
 					<td><?= $produto['nome']?></td>
 					<td><?= $produto['tipo']?></td>
 					<td><?= $produto['categoria']?></td>
 					<td><?= $produto['fabricante']?></td>
 					<td><?= $produto['ativo']?></td>
-					<td><?= $produto['ativo']?></td>
 					<td>
-					<?php
-					if(isset($_SESSION['tipo']) && $_SESSION['tipo']== "Administrador"){	
-						$idproduto = $produto['idproduto'];				
-						echo "<a href='estoque.php?id=>$idproduto;'>[ESTOQUE]</a>";
-						echo "<a href='cadastroProduto.php' class='col-6 btn btn-link' style='float:right;' >
-						<i class='bi bi-plus-circle' style='font-size: 2rem;'></i>
-						<h6>Cadastrar</h6>
-					</a>";
-					}?>	
-					
-						<a href="mais_detalhes.php?id=<?=$produto['idproduto']; ?>">[DETALHES]</a>
+						<?php
+						if(isset($_SESSION['tipo']) && $_SESSION['tipo'] == "Administrador"){
+							$idProduto = $produto['idproduto'];
+							echo "<a href='estoque.php?id=$idProduto;'>[ESTOQUE]</a>";
+						}?>
+                        <a href="mais_detalhes.php?id=<?=$produto['idproduto']; ?>">[DETALHES]</a>
 					</td>
 				</tr>
 				<?php
