@@ -9,9 +9,19 @@
             <li><a href="sobre_nos.php">Sobre nós</a></li>
             <li><a href="contato.php">Contatos</a></li>
 
-            <?php if(isset($_SESSION['tipo'])){?>      
+            <?php if(isset($_SESSION['id'])){
+                
+                
+            ?>      
 
-            <li><a href="edit_cadastro.php">Editar Perfil</a></li>
+            <li><a href="clienteConfiguracao.php">Editar Perfil</a></li>
+
+            <?php } ?>
+
+            <?php if(isset($_SESSION['nome'])){ ?> 
+                
+            <li style="float: right;"><a href="clienteConfiguracao.php">BEM VINDO: <?= substr($_SESSION['nome'], 0, strpos($_SESSION['nome'], " "));     ?></a></li>
+            
 
             <?php } ?>
         </ul>
