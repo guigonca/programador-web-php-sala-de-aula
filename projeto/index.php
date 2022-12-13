@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+<?php 
+	$teste = isset($_COOKIE['cliente']) ? $_COOKIE['cliente'] : '';
+	$teste = isset($_COOKIE['login']) ? $_COOKIE['login'] : '';
+	
+?>
+
 <head>
 	<?php require "html/head.php" ?>
 
@@ -41,6 +47,18 @@
 		}
 
 		?>
+		<?php 
+			echo "Cookie: " . $teste;
+			echo "<br>";
+			echo "Time(): " . time(); 
+			echo "<br>";
+			echo "Data e hora: " . date("d/m/y H:i:s", time()+3600);
+			echo "<br>";
+			echo "Data e hora: " . date("d/m/y H:i:s", time()+3600);
+			echo "<br>";
+			echo "Cookie: " . $teste;
+			echo "<br>";
+		?>
 
 		<div id="banner">
 	 		<img src="img/banner/banner1.png" alt="banner do site">
@@ -49,6 +67,7 @@
 		</div>
 
 		<main>
+
 			<div class="row text-center mb-4">
 	 			<div class="col-sm-6">
 					<h3>HARDWARE</h3>

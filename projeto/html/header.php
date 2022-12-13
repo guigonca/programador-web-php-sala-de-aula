@@ -1,3 +1,7 @@
+<?php
+	$login = isset($_COOKIE['login']) ? $_COOKIE['login'] : '';
+
+?>
 <header>
 			<section>
 				<figure id="logo">
@@ -44,13 +48,28 @@
 							<br>
 
 							<label class="form-label">E-mail:</label><br>
-							<input type="text" name="email" class="form-control" placeholder="E-mail"><br>
+							<input type="text" name="email" class="form-control" placeholder="E-mail" value="<?= $login ?>"><br>
 
 							<label class="form-label">Senha:</label><br>
 							<input type="password" name="senha" class="form-control"><br>
 
 							<!-- <input type="submit" value="Entrar" class="btn btn-primary"> -->
 
+							<div class="form-group">
+								<input type="checkbox"
+								<?php if($login != ''){
+									echo "checked";
+
+								}else{
+
+								} echo '';
+
+								// FAZER O COOKIE NÃO RENOVAR, IF TIVER COOKIE ENTÃO N FAÇA NADA, SE NAÕ CRIE.
+								?> 
+								name="lembrar" id="lembrar">
+								<label for="lembrar">Lembrar meu e-mail<br></label>
+							</div>
+							<br>
 
 							<a href="cadastroCliente.php">Crie o seu CADASTRO</a>
 						</div>
@@ -101,7 +120,7 @@
 							<br>
 
 							<label class="form-label">E-mail:</label><br>
-							<input type="text" name="email" class="form-control" placeholder="E-mail"><br>
+							<input type="text" name="email" class="form-control" placeholder="E-mail" value="<?= $login ?>"><br>
 
 							<label class="form-label">Senha:</label><br>
 							<input type="password" name="senha" class="form-control"><br>
